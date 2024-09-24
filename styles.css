@@ -1,0 +1,140 @@
+.obrasPrincipiante {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.obrasPrincipiante img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.image-card {
+    position: relative;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+.art-type, .art-title, .art-stock {
+    margin: 0;
+    font-size: 14px;
+}
+
+.art-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cuadrilla-artistas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cuadrilla-artistas .contenedor-imagen:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.cuadrilla-artistas .contenedor-imagen:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.cuadrilla-artistas .contenedor-imagen:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.cuadrilla-artistas .contenedor-imagen:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.cuadrilla-artistas .contenedor-imagen:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.cuadrilla-artistas .contenedor-imagen {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuadrilla-artistas .contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cuadrilla-artistas .superposicion {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadrilla-artistas .superposicion:hover {
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.tipo-obra {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-obra {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.cantidad-muestras {
+    font-size: smaller;
+}
+
+.cuadrilla-artistas .superposicion p {
+    margin: 5px 0;
+}
